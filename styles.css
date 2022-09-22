@@ -1,0 +1,174 @@
+/* CSS by G. Irem Bas */
+/* colors for Coolors.co */
+
+:root{
+    --light_cold: #aa998f;
+    --dark_cold: #d1be9c;
+    --light_warm: #7d4f50;
+    --dark_warm: #590d22;
+    --light: #f9eae1;
+    --dark: #cc8b86;
+}
+html,body{
+    height: 100%;
+}
+
+body{
+    /*background-color: var(--dark_cold); */
+    display: flex;
+    flex-direction: column;
+}
+fieldset{
+    border-radius: 5px;
+    border-color: var(--dark_warm);
+}
+.limiter{
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+  /* background-color: #f9eae1; */
+   padding: 1%;
+   max-width: 500px;
+
+
+}
+
+* {
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header,footer{
+    background-color: var(--dark);
+    padding: 1em 0;
+    flex-grow: 0;
+}
+
+main{
+    flex-grow: 1;
+}
+.row{
+    float: left;
+    width: 100%;
+    
+}
+.row>div{
+    width: calc(100%/7.0);
+    float: left;
+}
+.square-holder{
+    position:relative;
+}
+.square-sizer{
+    padding-top: 100%; 
+}
+.square-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.cell{
+    background-color: var(--light_warm);
+}
+.wayable{
+    background-color: var(--light);
+}
+.player_sympol, .target, .directions_arrow {
+    background-size: 600%;
+    background-image:url(images.svg);
+}
+.player_sympol{
+    background-position: 0% 0%;
+}
+.target{
+    background-position: 20% 0%;
+}
+.wall{
+    background-color: var(--dark_warm);
+}
+.sizebar{
+    clear: both;
+    text-align: right;
+    padding-top: 0.2em;
+}
+.sizebar>button{
+    width: 5em;
+    margin: left 0.5em;
+
+}
+button:hover{
+    background-color:var(--light_cold);
+    cursor: pointer;
+} 
+.control-holder{
+    background-color: var(--light);
+    width: 90% ;
+    max-width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.directions_arrow{
+    cursor: pointer;
+}
+ .directions_arrow:hover{
+    background-color: var(--light_cold);
+}
+.directions_spacer, .directions_arrow{
+    width: calc(33% - 2px);
+    height: calc(33% - 2px);
+    float: left;
+    border: 1px solid var(--light_warm );
+}
+.up{
+    background-position: 40%;
+}
+.right{
+    background-position: 60%;
+}
+.down{
+    background-position: 80%;
+}
+.left{
+    background-position: 100%;
+}
+.popup{
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.popup>div{
+    width: 15em;
+    background-color: var(--light );
+    padding: 3em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 00.5em;
+    border: #590d22;
+}
+.popup>div>button{
+    margin: 1em;
+} 
+@media (orientation: landscape){
+    .limiter{
+        width: 800vmin;
+        max-width: 600px;
+    }
+    main>.limiter{
+        display: flex;
+        justify-content: space-between;
+    }
+    .limiter>fieldset{
+        width: 45%;
+        float: left;
+        margin-right: 0.1em;
+    }
+}
